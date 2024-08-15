@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="d
+styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <a href="#profile">Profile</a>
+                <a href="#settings">Settings</a>
+                <a href="#upload">Upload</a>
+                <a href="#transcript">Download Transcript</a>
+                <a href="logout.html">Logout</a>
+            </nav>
+        </aside>
+
+        <h1>Dashboard</h1>
+    <div class="dashboard">
+        <!-- Profile Section -->
+
+        <!-- Upload Section -->
+        <section id="upload">
+            <h2>Upload Image/Video</h2>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*,video/*">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <!-- Download Transcript Section -->
+        <section id="transcript">
+            <h2>Download Transcript</h2>
+            <p>You can download your transcript in PDF format.</p>
+            <button onclick="downloadTranscript()">Download PDF</button>
+        </section>
+    </div>
+
+    <script>
+        function downloadTranscript() {
+            window.location.href = 'transcript.pdf';
+        }
+    </script>
+</body>
+</html>
